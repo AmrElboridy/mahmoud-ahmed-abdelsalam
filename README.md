@@ -49,14 +49,15 @@ then configured the integration of gitlab and jenkins in gitlab server ,added th
 ![post build action](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/fbeddf24-c1ca-4d67-99f8-1c419c6ad015)
 
 
-- choose the action for trigger: triggered with fail any 
+- choose the action for trigger: triggered with failure any 
 
 ![trigger ](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/fb882c4e-1d50-4544-980c-c5d9a221f89c)
 
 
 
 # gitlab repo 
-![gitlab repo](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/28aeedff-5089-41cc-b1cc-9dd812cffd00)
+
+![image](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/5159ba1b-65ce-44d2-a635-33adadf8e4b3)
 
 
 # Jenkins file

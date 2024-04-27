@@ -56,3 +56,11 @@ choose the action for trigger: triggered with fail any
 
 # gitlab repo 
 ![gitlab repo](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/28aeedff-5089-41cc-b1cc-9dd812cffd00)
+
+
+# Jenkins file
+in case of using Jenkins file you will find it in "jenkins file (example)" 
+use check for scm and it will do all the job
+
+
+

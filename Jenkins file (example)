@@ -12,9 +12,8 @@ pipeline {
             steps {
                 script {
                     ansiblePlaybook(
-                        playbook: 'path/to/WebServerSetup.yml',
-                        inventory: 'path/to/inventory_file',
-                        credentialsId: 'your_ansible_credentials_id'
+                        playbook: 'WebServerSetup.yml',
+                        inventory: 'hosts'
                     )
                 }
             }
@@ -24,12 +23,12 @@ pipeline {
     post {
         failure {
             script {
-                def failedUsers = sh(script: "grep 'webAdmins' path/to/inventory_file | cut -d'=' -f2", returnStdout: true).trim()
-                def pipelineDate = sh(script: "date '+%Y-%m-%d %H:%M:%S'", returnStdout: true).trim()
+                def failedUsers = sh(script: "ssh mahmoud@192.168.221.147 ./GroupMembers.sh", returnStdout: true).trim()
+                def pipelineDate = sh(script: "date", returnStdout: true).trim()
                 
                 emailext subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
                           body: "The pipeline ${currentBuild.fullDisplayName} failed.\n\nReason: ${currentBuild.currentResult}\n\nList of users in the 'webAdmins' group: ${failedUsers}\n\nDate of pipeline execution: ${pipelineDate}",
-                          to: "your_email@example.com"
+                          to: "ma6065044@gmail.com"
             }
         }
     }

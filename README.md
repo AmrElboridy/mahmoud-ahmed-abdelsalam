@@ -47,7 +47,7 @@ build steps configuration (just invoke the ansible playbook and show the hosts f
 post build action : the email notifaction on failure
 ![post build action](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/fbeddf24-c1ca-4d67-99f8-1c419c6ad015)
 
-triggered with fail any 
+choose the action for trigger: triggered with fail any 
 ![trigger ](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/fb882c4e-1d50-4544-980c-c5d9a221f89c)
 
 

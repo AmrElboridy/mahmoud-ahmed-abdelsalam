@@ -21,3 +21,14 @@ This task ensures that the Apache service is restarted on the target hosts.
 
 
 # Jenkins configuration
+I used a freestyle job for this project.
+
+1-jenkins-gitlab configuration: first install "gitlab plugin" , and configured it and added the gitlab server link and the credentials for the server "the api token"
+see : ![gitlab connection and token](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/c8556cbc-0569-4fc5-a9c8-290ece606500)
+then configured the integration of gitlab and jenkins in gitlab server ,added the job url and the credentials.
+
+
+2- freestyle job configuration: ![description and connection in the job](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/ff21804c-acbc-4f22-a5c1-b3e61d41cb34) 
+
+
+

@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Install and configure Apache') {
+            steps {
+                script {
+                    ansiblePlaybook(
+                        playbook: 'path/to/WebServerSetup.yml',
+                        inventory: 'path/to/inventory_file',
+                        credentialsId: 'your_ansible_credentials_id'
+                    )
+                }
+            }
+        }
+    }
+    
+    post {
+        failure {
+            script {
+                def failedUsers = sh(script: "grep 'webAdmins' path/to/inventory_file | cut -d'=' -f2", returnStdout: true).trim()
+                def pipelineDate = sh(script: "date '+%Y-%m-%d %H:%M:%S'", returnStdout: true).trim()
+                
+                emailext subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
+                          body: "The pipeline ${currentBuild.fullDisplayName} failed.\n\nReason: ${currentBuild.currentResult}\n\nList of users in the 'webAdmins' group: ${failedUsers}\n\nDate of pipeline execution: ${pipelineDate}",
+                          to: "your_email@example.com"
+            }
+        }
+    }
+}

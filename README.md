@@ -4,7 +4,7 @@ it's a playbook for installing apache server on vm3
 using "become: yes" : Indicates that the tasks should be executed using sudo privileges.
 
 The playbook consists of several tasks, each performing a specific action:-
-Task 1: Install Apache HTTP Server
+- Task 1: Install Apache HTTP Server
 This task installs the Apache HTTP Server on the target host if it's not already installed (state: present).
 
 Task 2: Start Apache service

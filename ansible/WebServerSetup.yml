@@ -7,21 +7,22 @@
       package:
         name: httpd
         state: present
-    - name: Start Apache service
-      service:
-        name: httpd
-        state: started
-        enabled: yes
-    - name: Allow HTTP traffic through firewall
-      firewalld:
-        service: http
-        state: enabled
-        immediate: yes
     - name: Create a simple index.html file
       copy:
         content: "<html><body><h1>Hello from Ansible!</h1></body></html>"
         dest: /var/www/html/index.html
-    - name: Ensure Apache service is restarted
-      service:
-        name: httpd
+
+
+  handlers:
+    - name: Start httpd server
+      ansible.builtin.systemd:
+        service: dhcpd
+        enabled: true
         state: restarted
+
+    - name: Add http to firewall
+      ansible.posix.firewalld:
+        service: http
+        permanent: true
+        immediate: true
+        state: enabled

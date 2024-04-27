@@ -41,11 +41,12 @@ then added the url of the project repo, then the build triggers (when i push a n
 build environment configuration: delete the workspace before a new build (to avoide building an version)
 ![buils environment ](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/ebd09daf-5a4b-455d-b3cb-b779932fde04)
 
-build steps configuration (just invoke the ansible playbook)
+build steps configuration (just invoke the ansible playbook and show the hosts file)
 ![build steps](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/b363a678-fd8c-4399-bbc1-9d5db6eaa316)
 
 post build action : the email notifaction on failure
 ![post build action](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/fbeddf24-c1ca-4d67-99f8-1c419c6ad015)
+
 triggered with fail any 
 ![trigger ](https://github.com/mahmoud649/mahmoud-ahmed-abdelsalam/assets/91491069/fb882c4e-1d50-4544-980c-c5d9a221f89c)
 

@@ -7,5 +7,5 @@ i=0
 sudo groupadd webAdmins
 for value in "${user[@]}"
 do
-  sudo adduser -G $group $value
+  sudo useradd -G $group $value
 done
